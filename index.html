@@ -1,22 +1,31 @@
-<html>
-<title>Fahrenheit to Celcius Temperature Converter</title>
-<body>
-
-<h2>Temperature Converter</h2>
-<p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
-
-<p>
-  <label>Fahrenheit</label>
-  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
-</p>
-<p>Celcius: <span id="outputCelcius"></span></p>
-
-<script>
-function temperatureConverter(valNum) {
-  valNum = parseFloat(valNum);
-  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset=utf-8 />
+<title>JavaScript program to calculate multiplication and division of two numbers </title>
+    <script>
+        function convert()
+{
+    var person = prompt("The result is: ", "temp")
+  if (degree == "C") {
+    temp = document.getElementById("c").value * 9 / 5 + 32;
+    document.getElementById("fahrenheit").value = Math.round(temp);
+  } else {
+    x = (document.getElementById("fahrenheit").value -32) * 5 / 9;
+    document.getElementById("celcius").value = Math.round(temp);
+  }
 }
-</script>
 
+    </script>
+<style type="text/css">
+body {margin: 30px;}
+</style> 
+</head>
+<body>
+<form>
+Celcius <input type="text" id="celcius" /><br>
+Fahrenheit <input type="text" id="fahrenheit" /><br>
+<input type="button" onClick="convert()" Value="Convert" />
+</form>
 </body>
 </html>
